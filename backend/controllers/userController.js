@@ -1,4 +1,6 @@
-
+import validator from "validator"
+import userModel from "../models/userModel.js"
+import bcrypt from "bcrypt"
 
 // Route for user login
 const loginUser = async (req,res)=>{
@@ -9,6 +11,45 @@ const loginUser = async (req,res)=>{
 
 //Route for user register
 const registerUser = async (req,res)=>{
+
+  try {
+    
+    const {name,email,password} = req.body
+
+    //checking user already exist or not
+    const exist = await userModel.findOne({email});
+    if(exist){
+      return res.json({success:false, message:"User already exists"})
+    }
+
+
+    // validating email format & strong password
+    if(!validator.isEmail(email)){
+      return res.json({success:false, message:"Please enter a valid email"})
+    }
+    if(password.lenght< 8){
+      return res.json({success:false, message:"Please enter strong password"})
+    }
+
+    
+    // hashing user password
+    const salt = await bcrypt.genSalt(10)
+    const hashedPassword = await bcrypt.hash(password,salt)
+
+    const newUser = new userModel({
+      name,
+      email,
+      password:hashedPassword
+    })
+
+    const user = await newUser.save() 
+
+    
+
+  } catch (error) {
+    
+  }
+
 
 }
 
