@@ -2,7 +2,9 @@ import React from 'react'
 
 const Add = () => {
   return (
-    <div>Add</div>
+    <form action="">
+      <div></div>
+    </form>
   )
 }
 
