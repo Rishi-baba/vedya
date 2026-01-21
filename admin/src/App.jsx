@@ -27,7 +27,7 @@ const App = () => {
           <hr />
           <div className="flex w-full">
             <Sidebar></Sidebar>
-            <div className="w-[70] mx-auto ml-[max(5vw,25px0] my-8 text-gray-600 text-base">
+            <div className="w-[70%] mx-auto ml-[max(5vw,25px0] my-8 text-gray-600 text-base">
               <Routes>
                 <Route path="/" element={<Navigate to="/add" />} />
                 <Route path="/add" element={<Add token={token}></Add>}></Route>
