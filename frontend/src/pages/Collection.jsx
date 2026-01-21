@@ -53,7 +53,7 @@ const Collection = () => {
   }
   useEffect(() => {
     applyfilter();
-  },[Category,Subcategory,search,showSearch]);
+  },[Category,Subcategory,search,showSearch,products]);
 
   const setProduct = ()=>{
 
