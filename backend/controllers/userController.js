@@ -26,7 +26,7 @@ const loginUser = async (req,res)=>{
       return res.json({success:true, token})
     }
     else{
-      return res.json({success:true, message:"wrong password"})
+      return res.json({success:false, message:"wrong password"})
     }
 
 
