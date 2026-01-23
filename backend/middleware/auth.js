@@ -17,4 +17,7 @@ const authUser = async(req,res,next)=>{
     console.log(error);
     return res.json({success:false, message:error.message})
   }
+  next()
 }
+
+export default authUser
