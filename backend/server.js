@@ -16,14 +16,7 @@ connectCloudinary()
 
 //middlewares
 app.use(express.json())
-app.use(cors({
-  origin: [
-    "https://vedya-frontend-2.vercel.app"
-  ],
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
-}))
-
+app.use(cors())
 
 //api endpoints 
 app.use('/api/user',userRouter)
