@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Infinity } from "lucide-react";
 import { assets } from "../assets/assets";
 import { Link, NavLink } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
@@ -15,7 +16,10 @@ const Navbar = () => {
 
   return (
     <div className="flex items-center justify-between py-5 font-medium">
-      <Link to="/"><img src={assets.logo} alt="" className="w-36" /></Link>
+      <Link to="/" className="flex items-center gap-2">
+        <Infinity className="w-8 h-8 text-gray-800" />
+        <span className="text-2xl font-bold tracking-widest text-gray-900">FOREVER</span>
+      </Link>
 
       <ul className="hidden sm:flex gap-5 text-sm text-gray-700">
         <NavLink to="/" className="flex flex-col items-center gap-1">
