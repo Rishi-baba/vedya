@@ -10,7 +10,7 @@ const LatestCollection = () => {
     const [latestProduct, setLatestProduct] = useState([])
 
     useEffect(() => {
-        const latest = products.slice(0,10);
+        const latest = products.slice(-10).reverse();
         setLatestProduct(latest);
     }, [products]);
 
