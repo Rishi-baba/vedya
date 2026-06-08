@@ -33,10 +33,10 @@ const Add = ({token}) => {
       formData.append("bestseller",bestseller)
       formData.append("sizes",JSON.stringify(sizes))
       
-      image1 & formData.append("image1",image1)
-      image2 &formData.append("image2",image2)
-      image3 & formData.append("image3",image3)
-      image4 & formData.append("image4",image4)
+      image1 && formData.append("image1",image1)
+      image2 && formData.append("image2",image2)
+      image3 && formData.append("image3",image3)
+      image4 && formData.append("image4",image4)
 
       const response = await axios.post(backendUrl + '/api/product/add', formData,{headers:{token}})
       console.log(response.data);
@@ -50,6 +50,7 @@ const Add = ({token}) => {
         setImage3(false)
         setImage4(false)
         setPrice("")
+        setBestseller(false)
       }else{
         toast.error(response.data.message)
       }
@@ -174,7 +175,7 @@ const Add = ({token}) => {
       </div>
 
       <div className="flex gap-2 mt-2">
-        <input onChange={()=>setBestseller(prev => !prev)}
+        <input onChange={(e)=>setBestseller(e.target.checked)}
         checked={bestseller} type="checkbox" id="bestseller"/>
         <label className="cursor-pointer" htmlFor="bestseller">Add to bestseller</label>
       </div>
