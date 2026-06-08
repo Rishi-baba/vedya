@@ -14,14 +14,14 @@ const About = () => {
         <img className="w-full md:max-w-[450px] shadow-lg rounded-sm hover:scale-[1.02] transition-transform duration-500" src={assets.about_img} alt="About Us" />
         <div className="flex flex-col justify-center gap-6 md:w-2/4 text-gray-600">
           <p className="leading-relaxed">
-            Forever was born out of a passion for innovation and a desire to revolutionize the way people experience fashion. Our journey began with a simple idea: to provide a platform where customers can easily discover, explore, and purchase a wide range of premium products from the comfort of their homes.
+            Vedya was born out of a passion for innovation and a desire to revolutionize the way people experience fashion. Our journey began with a simple idea: to provide a platform where customers can easily discover, explore, and purchase a wide range of premium products from the comfort of their homes.
           </p>
           <p className="leading-relaxed">
             Since our inception, we've worked tirelessly to curate a diverse selection of high-quality garments that cater to every taste and preference. From sustainable fabrics to modern cuts, our collection offers an extensive, growing aesthetic to meet your style.
           </p>
           <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-black mt-2">
             <b className="text-gray-800 text-lg block mb-2">Our Mission</b>
-            <p>Our mission at Forever is to empower customers with choice, convenience, and confidence. We're dedicated to providing a seamless shopping experience that exceeds expectations, from browsing and ordering to delivery and beyond.</p>
+            <p>Our mission at Vedya is to empower customers with choice, convenience, and confidence. We're dedicated to providing a seamless shopping experience that exceeds expectations, from browsing and ordering to delivery and beyond.</p>
           </div>
         </div>
       </div>
